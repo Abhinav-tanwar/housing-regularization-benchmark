@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Housing Regularization Benchmark</title><style>body{font:16px/1.55 system-ui;background:#eef3f6;color:#173448;margin:0}main{max-width:1100px;margin:auto;padding:36px 24px}header{border-top:5px solid #28778b;padding-top:18px}.eyebrow{font-size:12px;letter-spacing:2px;color:#28778b}h1{font-size:39px;line-height:1.15;letter-spacing:-1px}h2{font-size:22px;margin-top:28px}a{color:#246a80}.notice{background:#fff1dc;padding:14px 18px;border-left:4px solid #cc873e}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:16px}.card,details{background:white;border:1px solid #d2dfe7;border-radius:10px;padding:18px}.card h2{margin:10px 0;font-size:21px}.card p{font-size:14px;color:#51697a}.card{color:inherit;text-decoration:none}table{background:white;border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:9px;border-bottom:1px solid #dce5eb;overflow-wrap:anywhere}pre{font-size:12px;overflow:auto}img{max-width:100%;border-radius:8px}footer{margin-top:30px;font-size:13px;color:#51697a}</style></head><body><main><header><p class="eyebrow">ABHINAV TANWAR · PYTHON ANALYSIS</p><h1>Housing Regularization Benchmark</h1><p>OLS, ridge, lasso, elastic net, and principal-component regression on a legacy housing sample.</p></header><h2>Scope and methods</h2><p>Combines the supplied regularization bonus and housing PCA regression work using the supplied Boston-format CSV. The legacy B variable is excluded from predictors. OLS, ridge, lasso, elastic net, and principal-component regression share one held-out split. Scalers and PCA are fitted inside their pipelines; hyperparameter selection is confined to training folds. These legacy observations are a historical modeling benchmark, not a basis for present property decisions.</p><h2>Measured results</h2><table><tr><th>Calculated measure</th><th>Value</th></tr><tr><td>rows</td><td>506</td></tr><tr><td>train rows</td><td>379</td></tr><tr><td>test rows</td><td>127</td></tr><tr><td>baseline / rmse</td><td>8.638</td></tr><tr><td>baseline / mae</td><td>6.313</td></tr><tr><td>baseline / r squared</td><td>-0.008852</td></tr><tr><td>models / OLS / rmse</td><td>4.761</td></tr><tr><td>models / OLS / mae</td><td>3.271</td></tr><tr><td>models / OLS / r squared</td><td>0.6934</td></tr><tr><td>models / Ridge / rmse</td><td>4.81</td></tr><tr><td>models / Ridge / mae</td><td>3.268</td></tr><tr><td>models / Ridge / r squared</td><td>0.6872</td></tr><tr><td>models / Ridge / selected / model  alpha</td><td>10</td></tr><tr><td>models / Lasso / rmse</td><td>4.77</td></tr><tr><td>models / Lasso / mae</td><td>3.27</td></tr><tr><td>models / Lasso / r squared</td><td>0.6923</td></tr><tr><td>models / Lasso / selected / model  alpha</td><td>0.01</td></tr><tr><td>models / Elastic net / rmse</td><td>4.78</td></tr><tr><td>models / Elastic net / mae</td><td>3.268</td></tr><tr><td>models / Elastic net / r squared</td><td>0.6911</td></tr><tr><td>models / Elastic net / selected / model  alpha</td><td>0.01</td></tr><tr><td>models / Elastic net / selected / model  l1 ratio</td><td>0.1</td></tr><tr><td>models / PCA regression / rmse</td><td>5.252</td></tr><tr><td>models / PCA regression / mae</td><td>3.556</td></tr><tr><td>models / PCA regression / r squared</td><td>0.627</td></tr><tr><td>models / PCA regression / components</td><td>9</td></tr></table><details><summary>Full result structure</summary><pre>{
+  &quot;rows&quot;: 506,
+  &quot;train_rows&quot;: 379,
+  &quot;test_rows&quot;: 127,
+  &quot;excluded&quot;: [
+    &quot;B&quot;
+  ],
+  &quot;baseline&quot;: {
+    &quot;rmse&quot;: 8.63768119724422,
+    &quot;mae&quot;: 6.312575571852992,
+    &quot;r_squared&quot;: -0.008852190553198191
+  },
+  &quot;models&quot;: {
+    &quot;OLS&quot;: {
+      &quot;rmse&quot;: 4.761426981965142,
+      &quot;mae&quot;: 3.2705054196699455,
+      &quot;r_squared&quot;: 0.693445668546778,
+      &quot;selected&quot;: {}
+    },
+    &quot;Ridge&quot;: {
+      &quot;rmse&quot;: 4.809624892316643,
+      &quot;mae&quot;: 3.26775808682478,
+      &quot;r_squared&quot;: 0.6872080174452675,
+      &quot;selected&quot;: {
+        &quot;model__alpha&quot;: 10
+      }
+    },
+    &quot;Lasso&quot;: {
+      &quot;rmse&quot;: 4.770461838927883,
+      &quot;mae&quot;: 3.2703235173090364,
+      &quot;r_squared&quot;: 0.6922811847525149,
+      &quot;selected&quot;: {
+        &quot;model__alpha&quot;: 0.01
+      }
+    },
+    &quot;Elastic_net&quot;: {
+      &quot;rmse&quot;: 4.7795205247014385,
+      &quot;mae&quot;: 3.2679164735521584,
+      &quot;r_squared&quot;: 0.691111413446106,
+      &quot;selected&quot;: {
+        &quot;model__alpha&quot;: 0.01,
+        &quot;model__l1_ratio&quot;: 0.1
+      }
+    },
+    &quot;PCA_regression&quot;: {
+      &quot;rmse&quot;: 5.252142135387568,
+      &quot;mae&quot;: 3.55634372084045,
+      &quot;r_squared&quot;: 0.6270023112497332,
+      &quot;components&quot;: 9
+    }
+  }
+}</pre></details><footer>Calculated by the included native script. Public-repository status is recorded in the collection index.</footer></main></body></html>
