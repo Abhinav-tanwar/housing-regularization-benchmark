@@ -1,0 +1,1 @@
+Supplied source data; curated CSV has 506 rows. Removed columns: B. Original files are preserved locally. Health data release was explicitly authorized with identifiers removed. Boston's legacy B field is excluded; supplied records support a historical benchmark, not real-estate advice.
